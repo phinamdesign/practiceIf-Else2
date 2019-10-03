@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<div id="wrapper">
+    <form action="">
+        <label for="money">Số tiền muốn vay</label><br>
+        <input type="text" value="" id="money"><br><br>
+        <label for="month">Chọn thời gian vay</label><br>
+        <select name="" id="month">
+            <option value="3">3 Tháng</option>
+            <option value="6">6 Tháng</option>
+            <option value="12">12 Tháng</option>
+            <option value="24">24 Tháng</option>
+            <option value="36">36 Tháng</option>
+        </select>
+        <button type="button" onclick="getMoney()">Tính lãi</button>
+    </form>
+    <p>Hiển thị lãi xuất hàng tháng :</p><br>
+    <p id="result"></p>
+</div>
+    <script>
+        function getMoney() {
+            let money = Number(document.getElementById("money").value);//số tiề vay
+            let a = 0.006;//lãi suất theo tháng
+            let b = Number(document.getElementById("month").value);//kỳ hạn
+            let c = Math.round(money/b);// số tiền gốc phải trả
+            let d= Math.round((money/b)+(money*a));
+            document.getElementById("result").innerHTML= "Số tiền gốc phải trả mỗi tháng là "+d+" VND"+"<br>"+"Số tiền lãi hàng tháng là "+(money*a)+" VND"+"<br>"+"Tổng số tiền phải trả là "+d+" VND";
+        }
+    </script>
+</body>
+</html>

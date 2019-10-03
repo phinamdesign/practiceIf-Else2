@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc </title>
+</head>
+<body>
+<h3>Giải phương trình : ax2 +bx + c = 0</h3>
+<form action="">
+    <label for="num1">Nhập số a</label>
+    <input type="text" value="" id="num1">
+    <label for="num2">Nhập số b</label>
+    <input type="text" value="" id="num2">
+    <label for="num3">Nhập số c</label>
+    <input type="text" value="" id="num3">
+    <button type="button" onclick="result()">Kết quả</button>
+</form>
+<p id="result"></p>
+<script>
+    function result() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let num3 = document.getElementById("num3").value;
+        let z = num2 * num2 - 4 * num1 * num3;
+        let y = Math.sqrt(z);
+        let x1, x2;
+        if (num1 != 0){
+            if (z < 0) {
+                document.getElementById("result").innerHTML = "Phương trình vô nghiệm ";
+            } else if (z == 0) {
+                x1 = -(num2/ 2 * num1)
+                document.getElementById("result").innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + x1;
+            } else {
+                x1 = (-num2 - y) /( 2 * num1);
+                x2 = (-num2 +y) /( 2 * num1);
+                document.getElementById("result").innerHTML = "Phương trình có 2 nghiệm là :" +x1+"va"+ x2;
+            }
+        }else {
+            document.getElementById("result").innerHTML= " a phải khác 0";
+        }
+    }
+</script>
+</body>
+</html>

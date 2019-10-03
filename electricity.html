@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let c = Number(prompt("Nhập số điện"));
+    let b;
+    let result;
+    if(c>0&&c<=50){
+        b= 1678;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }else if (c<=100){
+        b= 1678;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }else if (c<=200){
+        b= 1734;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }else if (c<=300){
+        b= 2014;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }else if (c<=400){
+        b= 2536;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }else{
+        b= 2834;
+        result = c*b;
+        alert("Số tiền điện thanh toán là : "+result+" VND");
+    }
+</script>
+</body>
+</html>

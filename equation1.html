@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<h3>Giải phương trình : ax + b = 0</h3>
+<form action="">
+    <label for="num1">Nhập số a</label>
+    <input type="text" value="" id="num1">
+    <label for="num2">Nhập số b</label>
+    <input type="text" value="" id="num2">
+    <button type="button" onclick="nghiem()">Kết quả</button>
+</form>
+<p id="result"></p>
+<script>
+    function nghiem() {
+        let  num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let x ;
+        if(num1 != 0){
+            x = (-num2)/num1;
+        }
+        document.getElementById("result").innerHTML="Phương trình có nghiệm x bằng = "+x;
+    }
+</script>
+</body>
+</html>
